@@ -2,27 +2,25 @@
 
 # Project Name
 
-> Description the project.
+> Awesome Books.
 
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- HTML5
+- CSS3
+- JAVASCRIPT ES6
 
-## Live Demo (if available)
+## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://mgmediaweb.github.io/awesome-books)
 
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+To view this document on your local computer, just clone this repository and view it in your preferred browser.
 
-
-To get a local copy up and running follow these simple example steps.
+Thanks for watching
 
 ### Prerequisites
 
@@ -34,21 +32,21 @@ To get a local copy up and running follow these simple example steps.
 
 ### Run tests
 
-### Deployment
-
-
+- Lintern
+- Eslint
+- Webhint
 
 ## Authors
 
-👤 **Author1**
+👤 **Gonzalo A. Medina**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@mgmediaweb](https://github.com/mgmediaweb)
+- LinkedIn: [gonzalo-medina-g](https://www.linkedin.com/in/gonzalo-medina-g/)
+- Twitter: [@GonzoMedinaDev](https://twitter.com/GonzoMedinaDev)
 
-👤 **Author2**
+👤 **Abuya Obunga**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
+- GitHub: [@vabuyia](https://github.com/vabuyia)
 - Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
