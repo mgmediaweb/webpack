@@ -1,14 +1,52 @@
-import _ from 'lodash';
+/* import _ from 'lodash'; */
+import Sortable from 'sortablejs';
+import TodoMaster from './todoClass.js';
 import './style.css';
 
-function component() {
-  const element = document.createElement('div');
+const form = document.getElementById('todoform');
 
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  element.classList.add('hello');
+const loadButtons = () => {
+  const btnsInfo = document.querySelectorAll('.article-info');
 
-  return element;
+  btnsInfo.forEach((btn) => {
+    const todoClick = new TodoMaster();
+    btn.addEventListener('click', () => {
+      todoClick.complete(btn.getAttribute('id'));
+      loadButtons();
+    });
+  });
+};
+
+class TodoClass extends TodoMaster {
+  constructor() {
+    super();
+    return undefined;
+  }
+
+  addTask(task) {
+    this.add(task);
+    loadButtons();
+  }
+
+  listTask() {
+    this.show();
+    loadButtons();
+  }
 }
 
-document.body.appendChild(component());
+const todo = new TodoClass();
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const task = document.getElementById('taskText');
+
+  todo.addTask(task.value);
+  task.value = '';
+});
+
+const el = document.getElementById('task-list');
+Sortable.create(el);
+
+// console.log(sortable);
+
+todo.listTask();

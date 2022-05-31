@@ -14,15 +14,34 @@
 <body>
     <div class="container">
         <div class="todoWin">
-            <ul>
-                <li><i class="far fa-square icon"></i></li>
-                <li><i class="far fa-check-square icon"></i></li>
-                <li><i class="fas fa-check icon"></i></li>
-                <li><i class="fas fa-sync icon"></i></li>
-                <li><i class="fas fa-trash-alt icon"></i></li>
-                <li><i class="fas fa-ellipsis-v icon"></i></li>
-            </ul>
+            <div class="win-header">
+                <p>Today's To Do</p>
+                <i class="fas fa-sync icon"></i>
+            </div>
+            
+            <form id="todoform" name="todoform" method="get" class="win-form">
+                <input 
+                    id="taskText" 
+                    type="text" 
+                    value="" 
+                    placeholder="Add to your list" 
+                    autocomplete="off"
+                    required 
+                />
+                <button type="submit" title="Add task">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </form>
+
+            <div>
+                <ul id="task-list"></ul>
+            </div>
+
+            <div class="win-footer">Clear all completed</div>
         </div>
     </div>
 </body>
 </html>
+        <!-- <ul>
+            <li><i class="fas fa-trash-alt icon"></i></li>
+        </ul> -->

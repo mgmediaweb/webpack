@@ -38,6 +38,7 @@
   },
   "homepage": "https://github.com/mgmediaweb/webpack#readme",
   "dependencies": {
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "sortablejs": "^1.15.0"
   }
 }
