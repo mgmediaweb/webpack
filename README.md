@@ -14,7 +14,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://mgmediaweb.github.io/webpack)
+[Live Demo Link](https://mgmediaweb.github.io/webpack/dist/)
 
 
 ## Getting Started
