@@ -19,6 +19,18 @@ export default class TodoMaster {
     }
   }
 
+  clear() {
+    const tasks = this.constructor.get();
+
+    const newTasks = tasks.filter((item) => {
+      if (!item.completed) return true;
+      return null;
+    });
+
+    this.constructor.set(newTasks);
+    this.show();
+  }
+
   complete(id = null) {
     const tasks = this.constructor.get();
 
@@ -36,14 +48,14 @@ export default class TodoMaster {
 
   del(id = null) {
     if (id != null) {
-      const books = this.constructor.get();
+      const tasks = this.constructor.get();
 
-      const newBooks = books.filter((item, key) => {
-        if (Number(id) !== key) return true;
+      const newTasks = tasks.filter((item) => {
+        if (Number(id) !== item.index) return true;
         return null;
       });
 
-      this.constructor.set(newBooks);
+      this.constructor.set(newTasks);
       this.show();
     }
   }
@@ -58,8 +70,16 @@ export default class TodoMaster {
     localStorage.setItem('tasks', JSON.stringify(tasks));
   }
 
-  static reorder() {
+  reorder() {
+    const tasks = this.constructor.get();
+    const ul = document.getElementById('task-list');
+    const li = ul.getElementsByTagName('li');
 
+    for (let i = 0; i < li.length; i += 1) {
+      tasks[li[i].getAttribute('id').slice(4)].index = i;
+      const newTasks = tasks.sort((a, b) => a.index - b.index);
+      this.constructor.set(newTasks);
+    }
   }
 
   show() {
@@ -79,13 +99,13 @@ export default class TodoMaster {
         }
 
         tasklist += `<li draggable="true" id="task${item.index}">
-              <div id="${item.index}" class="article-info">
+              <div id="axn${item.index}" class="article-info" onmousedown="return false">
                 <i id="icon${item.index}" class="${showIcon}"></i>
-                <p id="title${item.index}" ${showText}>${item.description} - ${item.index}</p>
+                <p id="title${item.index}" ${showText}>${item.description}</p>
               </div>
               
-              <div class="article-btn" title="Delete Task">
-                <i id="menu${item.index}" class="fas fa-trash-alt icon"></i>
+              <div id="del${item.index}" class="article-btn" title="Delete Task" onmousedown="return false">
+                <i class="fas fa-trash-alt icon"></i>
               </div>            
               
           </li>`;
@@ -93,7 +113,7 @@ export default class TodoMaster {
 
       taskList.innerHTML = tasklist;
     } else {
-      taskList.innerHTML = '<li class="win-empty">No task availables</ñi>';
+      taskList.innerHTML = '<li class="win-empty" onmousedown="return false"><span>No task availables</span></i>';
     }
 
     return true;
