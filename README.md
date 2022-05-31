@@ -2,7 +2,7 @@
 
 # Project Name
 
-> Awesome Books.
+> Todo List.
 
 
 ## Built With
@@ -10,10 +10,11 @@
 - HTML5
 - CSS3
 - JAVASCRIPT ES6
+- WEBPACK
 
 ## Live Demo
 
-[Live Demo Link](https://mgmediaweb.github.io/awesome-books)
+[Live Demo Link](https://mgmediaweb.github.io/webpack)
 
 
 ## Getting Started
@@ -43,12 +44,6 @@ Thanks for watching
 - GitHub: [@mgmediaweb](https://github.com/mgmediaweb)
 - LinkedIn: [gonzalo-medina-g](https://www.linkedin.com/in/gonzalo-medina-g/)
 - Twitter: [@GonzoMedinaDev](https://twitter.com/GonzoMedinaDev)
-
-👤 **Abuya Obunga**
-
-- GitHub: [@vabuyia](https://github.com/vabuyia)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 ## 🤝 Contributing
 
