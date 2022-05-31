@@ -58,6 +58,10 @@ export default class TodoMaster {
     localStorage.setItem('tasks', JSON.stringify(tasks));
   }
 
+  static reorder() {
+
+  }
+
   show() {
     const task = this.constructor.get();
     const taskList = document.getElementById('task-list');
@@ -77,7 +81,7 @@ export default class TodoMaster {
         tasklist += `<li draggable="true" id="task${item.index}">
               <div id="${item.index}" class="article-info">
                 <i id="icon${item.index}" class="${showIcon}"></i>
-                <p id="title${item.index}" ${showText}>${item.description}</p>
+                <p id="title${item.index}" ${showText}>${item.description} - ${item.index}</p>
               </div>
               
               <div class="article-btn" title="Delete Task">

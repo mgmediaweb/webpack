@@ -45,8 +45,8 @@ form.addEventListener('submit', (event) => {
 });
 
 const el = document.getElementById('task-list');
-Sortable.create(el);
-
-// console.log(sortable);
+Sortable.create(el, {
+  onEnd() { todo.reorder(); },
+});
 
 todo.listTask();
