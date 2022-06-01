@@ -13,9 +13,9 @@ module.exports = {
   ],
   output: {
     path: undefined,
-    publicPath: '/',
-    filename: 'static/js/[name].js',
-    chunkFilename: 'static/js/[name].chunk.js',
+    publicPath: './',
+    filename: '[name].bundle.js',
+    chunkFilename: '[name].chunk.js',
   },
   module: {
     rules: [
