@@ -27,7 +27,7 @@ export default class TodoMaster {
       return null;
     });
 
-    this.constructor.set(this.refreshId(newTasks));
+    this.constructor.set(this.constructor.refreshId(newTasks));
     this.show();
   }
 
@@ -55,7 +55,7 @@ export default class TodoMaster {
         return null;
       });
 
-      this.constructor.set(this.refreshId(newTasks));
+      this.constructor.set(this.constructor.refreshId(newTasks));
       this.show();
     }
   }
@@ -70,13 +70,8 @@ export default class TodoMaster {
     localStorage.setItem('tasks', JSON.stringify(tasks));
   }
 
-  refreshId(tasks) {
-    console.log("refreshId", tasks);
-    for (let i=0 ; i < tasks.length ; i++) {
-      console.log(tasks[i]);
-      tasks[i].index = i;
-    }
-
+  static refreshId(tasks) {
+    for (let i = 0; i < tasks.length; i += 1) tasks[i].index = i;
     return tasks;
   }
 
@@ -85,7 +80,7 @@ export default class TodoMaster {
     const ul = document.getElementById('task-list');
     const li = ul.getElementsByTagName('li');
 
-    for (let i = 0 ; i < li.length ; ++i) {
+    for (let i = 0; i < li.length; i += 1) {
       tasks[li[i].getAttribute('id').slice(4)].index = i;
     }
 
