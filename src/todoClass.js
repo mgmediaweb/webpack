@@ -9,7 +9,7 @@ export default class TodoMaster {
 
       const newTask = {
         completed: false,
-        description: task,
+        description: task.charAt(0).toUpperCase() + task.slice(1).toLowerCase(),
         index: taskMem.length,
       };
 
